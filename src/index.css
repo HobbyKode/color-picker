@@ -1,0 +1,118 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.color-list{
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+}
+
+.color-item{
+  display: flex;
+  border-radius: 6px;
+  width: 150px;
+  height: 150px;
+  margin: auto 5px;
+
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+  will-change: transform;
+  
+}
+
+/*Modes for color-item*/
+.color-item:hover,
+.color-item.focused {      /* reuse your existing keyboard focus class */
+  transform: scale(1.06);
+  box-shadow: 0 8px 16px rgba(0,0,0,.25);
+  z-index: 1;              /* float above neighbors when scaled */
+}
+.color-item.focused { 
+  outline: none;
+  box-shadow: 0 0 12px rgba(255,0,0,.25);
+}
+.color-item.selected { 
+  border: 3px solid white; 
+  box-shadow: 0 0 12px rgba(0,0,0,.35); 
+}
+
+
+.color-code{
+  display: inline-block;
+  padding: 4px 6px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 4px;
+  font-weight: 600;
+}
