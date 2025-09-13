@@ -51,14 +51,12 @@ export default function ColorPicker(){
         // instead of skipping the handleFocus phase
         if (e.key === "ArrowRight"){
             //Can move to the right until it reaches the last item
-            //if (focusedIndex === null) return;
             if (focusedIndex < colors.length - 1){
                 setHoveredColor(colors[focusedIndex + 1]);
                 setFocusedIndex(focusedIndex + 1);
             }
         }else if (e.key === "ArrowLeft"){
             //Can move to the left until it reaches the first item
-            //if (focusedIndex === null) return;
             if (focusedIndex > 0){
                 setHoveredColor(colors[focusedIndex - 1]);
                 setFocusedIndex(focusedIndex - 1);
