@@ -1,4 +1,4 @@
 # Codédex: Color Picker Project (React + Vite)
 
-Simple Color Picker app where I can select color items with both the mouse and keyboard commands
+Reusable color picker component with mouse and keyboard support. Should give me an idea on how to build templates for an inventory system, a pokédex or even a deck builder.
 
